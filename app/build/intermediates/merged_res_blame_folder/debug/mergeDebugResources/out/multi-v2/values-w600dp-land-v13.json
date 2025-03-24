@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.test.myportifolio.app-mergeDebugResources-31:/values-w600dp-land-v13/values-w600dp-land-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\1800851\\.gradle\\caches\\8.9\\transforms\\c06808b5e0921590ae9c1ce6c42edaa7\\transformed\\material-1.12.0\\res\\values-w600dp-land-v13\\values-w600dp-land-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "54",
+                        "endOffsets": "105"
+                    }
+                }
+            ]
+        }
+    ]
+}
