@@ -1,11 +1,12 @@
 plugins {
+    id("com.google.devtools.ksp") version "2.1.10-1.0.31"
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
 }
 
 android {
     namespace = "com.test.minhaagenda"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.test.minhaagenda"
@@ -36,6 +37,15 @@ android {
 }
 
 dependencies {
+
+    implementation(libs.androidx.room.runtime)
+    ksp(libs.androidx.room.compiler)
+    implementation(libs.androidx.room.ktx)
+
+    implementation(libs.dagger.compiler)
+    ksp(libs.dagger.compiler)
+
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
