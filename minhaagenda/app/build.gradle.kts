@@ -11,7 +11,7 @@ android {
     defaultConfig {
         applicationId = "com.test.minhaagenda"
         minSdk = 26
-        targetSdk = 34
+        34.also { targetSdk = it }
         versionCode = 1
         versionName = "1.0"
 
