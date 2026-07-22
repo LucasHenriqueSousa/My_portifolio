@@ -54,12 +54,33 @@ border-radius: 50%;
         }
         @keyframes pulseDot { 0%,100%{transform:scale(1);opacity:1} 
 50%{transform:scale(1.3);opacity:.7} }
-        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
         .nav-links a {
             color: var(--texto); text-decoration: none;
             font-weight: 500; font-size: 0.95rem;
             position: relative; transition: color 0.3s;
         }
+        .nav-actions {
+            display: flex; align-items: center; gap: 0.75rem; margin-left: 1rem;
+        }
+        .nav-action-btn {
+            display: inline-flex; align-items: center; justify-content: center;
+            gap: 0.45rem; padding: 0.7rem 1rem; border-radius: 999px;
+            border: 1px solid rgba(0,0,102,0.12); background: var(--branco);
+            color: var(--azul); font-weight: 600; font-size: 0.9rem;
+            text-decoration: none; transition: all 0.3s; box-shadow: 0 6px 18px rgba(0,0,102,0.06);
+        }
+        .nav-action-btn:hover {
+            transform: translateY(-2px);
+            border-color: rgba(255,98,0,0.35);
+            color: var(--laranja);
+            box-shadow: 0 10px 24px rgba(255,98,0,0.14);
+        }
+        .nav-action-btn.primary {
+            background: linear-gradient(135deg, var(--laranja), var(--laranja-2));
+            color: var(--branco); border-color: transparent;
+        }
+        .nav-action-btn.primary:hover { color: var(--branco); }
         .nav-links a::after {
             content: ''; position: absolute; bottom: -6px; left: 0;
             width: 0; height: 2px; background: var(--laranja);
@@ -643,6 +664,10 @@ break-word; }
                 box-shadow: 0 10px 30px rgba(0,0,102,0.1);
             }
             .nav-links.active { display: flex; }
+            .nav-actions {
+                margin-left: 0; margin-top: 0.25rem; flex-direction: column; align-items: stretch;
+            }
+            .nav-action-btn { width: 100%; }
             .photo-frame { width: 280px; height: 280px; }
             .float-tag { font-size: 0.75rem; padding: 0.6rem 0.9rem; }
         }
@@ -702,6 +727,10 @@ break-word; }
             <li><a href="#skills">Skills</a></li>
             <li><a href="#education">Formação</a></li>
             <li><a href="#contact">Contato</a></li>
+            <li class="nav-actions">
+                <a class="nav-action-btn primary" href="curriculo_lucas.pdf" download="curriculo_lucas.pdf">⬇ Download PDF</a>
+                <a class="nav-action-btn" href="curriculo_lucas.pdf" target="_blank" rel="noopener noreferrer">👁 Preview</a>
+            </li>
         </ul>
     </nav>
     <!-- HERO -->
