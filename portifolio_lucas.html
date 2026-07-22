@@ -384,14 +384,38 @@ var(--laranja-2));
             content: ''; position: absolute; top: 0; left: 0; bottom: 0;
             width: 5px; background: var(--laranja);
         }
-        .exp-sidebar { position: sticky; top: 100px; align-self: flex-start; }
+        .exp-sidebar {
+            position: sticky;
+            top: 100px;
+            align-self: flex-start;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
         .exp-logo {
-            width: 60px; height: 60px; border-radius: 15px;
-            background: var(--azul); color: var(--branco);
-            display: flex; align-items: center; justify-content: center;
-            font-weight: 700; font-size: 1.2rem;
-            font-family: 'Space Grotesk', sans-serif;
-            margin-bottom: 1.5rem;
+            width: min(100%, 220px);
+            padding: 1rem;
+            border-radius: 20px;
+            background: linear-gradient(135deg, rgba(255,98,0,0.08), rgba(0,0,102,0.04));
+            box-shadow: 0 12px 30px rgba(0,0,102,0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: floatCard 4s ease-in-out infinite;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .exp-logo:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 18px 40px rgba(0,0,102,0.12);
+        }
+        .exp-logo img {
+            width: 100%;
+            max-width: 180px;
+            height: auto;
+            display: block;
+            object-fit: contain;
+            filter: drop-shadow(0 8px 18px rgba(0,0,102,0.12));
+            animation: pulseLogo 4s ease-in-out infinite;
         }
         .exp-sidebar h3 { color: var(--azul); font-size: 1.4rem; margin-bottom: 
 0.3rem; }
@@ -593,6 +617,14 @@ break-word; }
             .hero-quick { justify-content: center; }
             .story-grid { grid-template-columns: 1fr; gap: 3rem; }
             .exp-card { grid-template-columns: 1fr; padding: 2rem; gap: 2rem; }
+            .exp-sidebar {
+                position: static;
+                align-items: flex-start;
+                margin-bottom: 0.5rem;
+            }
+            .exp-logo {
+                width: min(100%, 180px);
+            }
             section { padding: 5rem 1.5rem; }
             nav { padding: 1rem 1.5rem; }
             .menu-toggle { display: block; }
@@ -605,6 +637,33 @@ break-word; }
             .nav-links.active { display: flex; }
             .photo-frame { width: 280px; height: 280px; }
             .float-tag { font-size: 0.75rem; padding: 0.6rem 0.9rem; }
+        }
+        @media (max-width: 600px) {
+            .exp-card { padding: 1.3rem; gap: 1.2rem; }
+            .exp-sidebar {
+                align-items: center;
+                text-align: center;
+            }
+            .exp-logo {
+                width: min(100%, 150px);
+                margin: 0 auto 0.3rem;
+            }
+            .exp-content .exp-intro {
+                font-size: 1rem;
+                line-height: 1.7;
+            }
+            .task {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        @keyframes floatCard {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+        @keyframes pulseLogo {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.03); }
         }
         /* Fade-in animation */
         .reveal {
@@ -804,7 +863,9 @@ valor.</p>
             </div>
             <div class="exp-card">
                 <div class="exp-sidebar">
-                    <div class="exp-logo">itaú</div>
+                    <div class="exp-logo">
+  <img src="logo-itau-empresas-original.png" alt="Itaú Empresas">
+</div>
                     <h3>Itaú Unibanco</h3>
                     <div class="exp-role">Estagiário de Dados & Analytics</div>
                     <span class="exp-period">Jan/2025 · Presente</span>
