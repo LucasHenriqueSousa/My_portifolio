@@ -1,0 +1,33 @@
+:root{
+  --azul:#000066;
+  --azul-2:#1a1a8a;
+  --laranja:#FF6200;
+  --texto:#1a1a2e;
+  --texto-2:#5a5a70;
+  --branco:#ffffff;
+}
+html,body,#__next{ height:100%; }
+*{ box-sizing:border-box; }
+body{
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--texto);
+  background: linear-gradient(180deg,#fffaf6 0%, #f7fbff 50%, #eef2ff 100%);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+.container{ max-width:1120px; margin:0 auto; padding:0 1rem; }
+a{ color:inherit; }
+.reveal{ opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s ease; }
+.reveal.visible{ opacity:1; transform:none; }
+
+/* utility for anchors spacing when using sticky nav */
+[id] { scroll-margin-top: 88px; }
+
+/* Basic helpers for common classes used by components */
+.logo-dot{ width:10px; height:10px; background:var(--laranja); border-radius:50%; }
+.nav-action-btn{ padding:0.45rem 0.8rem; border-radius:999px; }
+.btn{ display:inline-flex; align-items:center; justify-content:center; }
+
+/* small responsive container tweak */
+@media(max-width:900px){ .container{ padding:0 0.8rem; } }
