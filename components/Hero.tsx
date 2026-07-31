@@ -20,8 +20,8 @@ export default function Hero() {
           </p>
 
           <div className="hero-cta">
-            <Link href="#contact"><a className="btn btn-primary">Vamos conversar →</a></Link>
-            <Link href="#story"><a className="btn btn-outline">Conheça minha trajetória</a></Link>
+            <Link href="#contact" className="btn btn-primary">Vamos conversar →</Link>
+            <Link href="#story" className="btn btn-outline">Conheça minha trajetória</Link>
           </div>
 
           <div className="hero-quick" aria-hidden>
@@ -58,7 +58,7 @@ export default function Hero() {
         .hero h1{ font-size:clamp(1.8rem, 3.6vw, 3.2rem); color:var(--azul); margin:1rem 0; }
         .accent{ color:#FF6200; position:relative; }
         .hero-tagline{ color:var(--texto-2); margin-bottom:1rem; max-width:560px; }
-        .btn{ padding:0.7rem 1.4rem; border-radius:999px; text-decoration:none; font-weight:600; }
+        .btn{ padding:0.7rem 1.4rem; border-radius:999px; text-decoration:none; font-weight:600; display:inline-flex; align-items:center; justify-content:center; }
         .btn-primary{ background:#FF6200; color:white; }
         .btn-outline{ border:2px solid #000044; color:#000044; background:transparent; padding:0.6rem 1.2rem; }
         .hero-visual{ display:flex; justify-content:center; align-items:center; }

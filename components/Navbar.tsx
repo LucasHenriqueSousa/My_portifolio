@@ -57,13 +57,13 @@ export default function Navbar() {
             className={`nav-links ${open ? 'active' : ''}`}
             role="menu"
           >
-            <li role="none"><Link href="#home"><a role="menuitem" onClick={() => setOpen(false)}>Início</a></Link></li>
-            <li role="none"><Link href="#story"><a role="menuitem" onClick={() => setOpen(false)}>Minha história</a></Link></li>
-            <li role="none"><Link href="#impact"><a role="menuitem" onClick={() => setOpen(false)}>Impacto</a></Link></li>
-            <li role="none"><Link href="#experience"><a role="menuitem" onClick={() => setOpen(false)}>Experiência</a></Link></li>
-            <li role="none"><Link href="#skills"><a role="menuitem" onClick={() => setOpen(false)}>Skills</a></Link></li>
-            <li role="none"><Link href="#education"><a role="menuitem" onClick={() => setOpen(false)}>Formação</a></Link></li>
-            <li role="none"><Link href="#contact"><a role="menuitem" onClick={() => setOpen(false)}>Contato</a></Link></li>
+            <li role="none"><Link href="#home" role="menuitem" onClick={() => setOpen(false)}>Início</Link></li>
+            <li role="none"><Link href="#story" role="menuitem" onClick={() => setOpen(false)}>Minha história</Link></li>
+            <li role="none"><Link href="#impact" role="menuitem" onClick={() => setOpen(false)}>Impacto</Link></li>
+            <li role="none"><Link href="#experience" role="menuitem" onClick={() => setOpen(false)}>Experiência</Link></li>
+            <li role="none"><Link href="#skills" role="menuitem" onClick={() => setOpen(false)}>Skills</Link></li>
+            <li role="none"><Link href="#education" role="menuitem" onClick={() => setOpen(false)}>Formação</Link></li>
+            <li role="none"><Link href="#contact" role="menuitem" onClick={() => setOpen(false)}>Contato</Link></li>
             <li className="nav-actions" role="none">
               <a className="nav-action-btn primary" href="/curriculo_lucas.pdf" download>⬇ Download PDF</a>
               <a className="nav-action-btn" href="/curriculo_lucas.pdf" target="_blank" rel="noopener noreferrer">👁 Preview</a>
